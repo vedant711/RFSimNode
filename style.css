@@ -137,6 +137,7 @@ body{
     display:flex;
     position: absolute;
     margin-top: 100px;
+    cursor:pointer;
     zoom:80%;
     /* top: 100px */
 }
@@ -163,6 +164,7 @@ body{
     display:flex;
     position: absolute;
     margin-top: 100px;
+    cursor: pointer;
     zoom:80%;
 }
 
@@ -193,6 +195,8 @@ body{
     position: absolute;
     margin-top: 100px;
     zoom:80%;
+    cursor:pointer;
+
     /* left: 100px; */
 }
 
@@ -238,6 +242,8 @@ body{
     position: absolute;
     margin-top: 100px;
     zoom:80%;
+    cursor:pointer;
+
 }
 
 .hplanetee .line {

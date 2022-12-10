@@ -64,7 +64,7 @@
                 p2 = (pin/2)*(1-Math.pow(rho2,2));
                 
                 output=document.getElementById('output');
-                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + '</p><p id="output-ans2">P2=' + String(p2) + '</p>';
+                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + 'W</p><p id="output-ans2">P2=' + String(p2) + 'W</p>';
                 document.getElementById('ei').style.display='none';
                 document.getElementById('eaw').style.display='none';
                 document.getElementById('eae').style.display='none';
@@ -92,7 +92,7 @@
                 console.log(rho1,rho2)
                 console.log(p1,p2)
                 output=document.getElementById('output');
-                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + '</p><p id="output-ans2">P2=' + String(p2) + '</p>';
+                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + 'W</p><p id="output-ans2">P2=' + String(p2) + 'W</p>';
                 document.getElementById('hi').style.display='none';
                 document.getElementById('haw').style.display='none';
                 document.getElementById('hah').style.display='none';
@@ -115,7 +115,7 @@
                 console.log(il)
                 p1 = pin*(Math.pow(10,(-il/10)))
                 output=document.getElementById('output');
-                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + '</p>';
+                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + 'W</p>';
                 document.getElementById('wi').style.display='none';
                 document.getElementById('waw').style.display='none';
                 document.getElementById('wae').style.display='none';
@@ -146,7 +146,7 @@
                 p2 = (pin/2)*(1-Math.pow(rho2,2));
                 
                 output=document.getElementById('output');
-                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + '</p><p id="output-ans2">P2=' + String(p2) + '</p>';
+                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + 'W</p><p id="output-ans2">P2=' + String(p2) + 'W</p>';
                 document.getElementById('ei').style.display='none';
                 document.getElementById('eaw').style.display='none';
                 document.getElementById('eae').style.display='none';
@@ -291,7 +291,7 @@
                 console.log(rho1,rho2)
                 console.log(p1,p2)
                 output=document.getElementById('output');
-                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + '</p><p id="output-ans2">P2=' + String(p2) + '</p>';
+                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + 'W</p><p id="output-ans2">P2=' + String(p2) + 'W</p>';
                 document.getElementById('hi').style.display='none';
                 document.getElementById('haw').style.display='none';
                 document.getElementById('hah').style.display='none';
@@ -337,7 +337,7 @@
                 console.log(il)
                 p1 = pin*(Math.pow(10,(-il/10)))
                 output=document.getElementById('output');
-                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + '</p>';
+                output.innerHTML='<p id="output-ans1">P1=' + String(p1) + 'W</p>';
                 document.getElementById('wi').style.display='none';
                 document.getElementById('waw').style.display='none';
                 document.getElementById('wae').style.display='none';
@@ -632,8 +632,8 @@
                 console.log(id)
                 let ans = output_arr[0]
                 console.log(ans)
-                innerStr = '<p>Initial Power Input</p><p>Pin=' + ans[1] + '</p>'
-                output.innerHTML = '<p>Initial Power Input</p><p>Pin=' + ans[1] + '</p>';
+                innerStr = '<p>Initial Power Input</p><p>Pin=' + ans[1] + 'W</p>'
+                output.innerHTML = '<p>Initial Power Input</p><p>Pin=' + ans[1] + 'W</p>';
 
             } else {
             let i1 = id.replace('ele','');
@@ -643,12 +643,12 @@
             // document.getElementById('output-ans2').style.display='none';
             let ans=output_arr[index-1];
             if(ans[0]===2) {
-                output.innerHTML = '<p>E Plane Tee</p><p>Pin=' + ans[1] + '</p><p>Z1='+ans[2]+'</p><p>Z2='+ans[3]+'</p><p>P1='+ans[4]+'</p><p>P2='+ans[5]+'</p>'
+                output.innerHTML = '<p>E Plane Tee</p><p>Pin=' + ans[1] + 'W</p><p>Z1='+ans[2]+'&#8486</p><p>Z2='+ans[3]+'&#8486</p><p>P1='+ans[4]+'W</p><p>P2='+ans[5]+'W</p>'
             } else if(ans[0]===3) {
-                output.innerHTML = '<p>H Plane Tee</p><p>Pin=' + ans[1] + '</p><p>Z1='+ans[2]+'</p><p>Z2='+ans[3]+'</p><p>P1='+ans[4]+'</p><p>P2='+ans[5]+'</p>'
+                output.innerHTML = '<p>H Plane Tee</p><p>Pin=' + ans[1] + 'W</p><p>Z1='+ans[2]+'&#8486</p><p>Z2='+ans[3]+'&#8486</p><p>P1='+ans[4]+'W</p><p>P2='+ans[5]+'W</p>'
 
             } else {
-                output.innerHTML = '<p>Waveguide</p><p>Pin=' + ans[1] + '</p><p>Insertion Loss='+ans[2]+'</p><p>Pout='+ans[3]+'</p>'
+                output.innerHTML = '<p>Waveguide</p><p>Pin=' + ans[1] + 'W</p><p>Insertion Loss='+ans[2]+'dB</p><p>Pout='+ans[3]+'W</p>'
 
             }
         }
@@ -658,9 +658,9 @@
             let final_ans = output_arr[output_arr.length-1];
             let output = document.getElementById('output');
             if(final_ans[0]===2 || final_ans[0]===3) {
-                output.innerHTML = '<p>Final Output</p><p>P1='+final_ans[4]+'</p><p>P2='+final_ans[5]+'</p>'
+                output.innerHTML = '<p>Final Output</p><p>P1='+final_ans[4]+'W</p><p>P2='+final_ans[5]+'W</p>'
             }else {
-                output.innerHTML = '<p>Final Output</p><p>Pout='+final_ans[3]+'</p>'
+                output.innerHTML = '<p>Final Output</p><p>Pout='+final_ans[3]+'W</p>'
 
             }
         }

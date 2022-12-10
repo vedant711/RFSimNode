@@ -554,11 +554,11 @@
             }else {
             let old_wave = output_arr[select_id];
             let t1; let t2;
-            if (select_id!=0) {
+            // if (select_id!=0) {
                 let new_pin = output_arr[select_id][1];
                 output_arr.splice(select_id,1);
                 waveguide_edit_calc(new_pin,il);
-            }
+            // }
             let i = select_id;
             for (let count=select_id+1;count<output_arr.length;count++){
                 // console.log('hi')
